@@ -1,0 +1,135 @@
+
+/* metto il colore di netflix a tutto il body */
+body {
+    background-color: #141414;
+}
+
+/* tutti i link si illuminano */
+a:hover {
+    color: #fff; 
+    opacity: 1 !important;
+    transition: all 0.8s cubic-bezier(.215, .61, .355, 1);
+}
+
+/* NavBar */
+
+/* stile sul logo di netflix */
+.logo {
+    width: 100px;
+}
+
+/* questa classe la uso per mettere il cursor pointer */
+.cursore {
+    cursor: pointer;
+}
+
+/* aggiungo stile all'immagine di profilo della navbar */
+.user-img {
+    width: 40px;
+}
+
+/* aggiungo stile al dropdown del profilo */
+.user-dropdown.show {
+    position: absolute;
+    left: -70px;
+}
+
+/* TV SHOWS */
+/* Modifico lo stile pre impostato di bootstrap, il bottone è quello con dentro scritto "Genres" */
+.btn:hover, .btn.show {
+    background-color: #212529;
+    color: #fff;
+}
+
+/* do stile ai due bottoni a destra di TV Shows */
+.btn-check:checked+.btn {
+    background-color: rgba(255, 255, 255, 0.468);
+}
+
+/* film   */
+
+.col {
+    flex: 0 0 0%;
+}
+
+.col-6 {
+    flex: 0 0 0%;
+    width: auto;
+}
+
+.row {
+    flex-wrap: nowrap;
+}
+
+.row>* {
+    margin: 0 3px;
+    flex-shrink: unset;
+}
+
+/* modifico la width pre impostata della classe container-fluid */
+.container-fluid {
+    width: -webkit-fill-available;
+    padding: 20px;
+}
+
+/* footer */
+
+.a-nowrap {
+    white-space: nowrap;
+}
+
+
+/* Media Queries */
+
+/* aggiungo stile alla sezione user in modo tale che rimanga sempre a schermo */
+@media screen and (max-width:991px) {
+    .user {
+        position: absolute;
+        right: 90px;
+        top: 35px;
+    }
+     
+}
+
+
+/* immagini */
+/* do volutamente a TUTTE le img la transizione quindi anche al logo netflix e la foto profilo, mi piace */
+@media screen and (min-width:991px) {
+    /* Transizione e Animazioni */
+    img:hover {
+        scale: 1.2;
+        z-index: 2;
+        overflow: visible;
+    }
+    
+    img {
+        transition: scale 1s;
+    }
+}
+
+
+
+.scroll {
+    opacity: 0;
+}
+
+.show-carousel {
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        scale: .5;
+    }
+    50% {
+        scale: 1.03;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
