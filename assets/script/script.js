@@ -15,9 +15,7 @@ document.addEventListener('scroll', function() {
       if (entry.isIntersecting) {
         // se l'elemento entra nella viwport allora aggiungi la classe
         entry.target.classList.add('show-carousel');
-      } else {
-        entry.target.classList.remove('show-carousel');
-      }
+      } 
     });
   }
 
